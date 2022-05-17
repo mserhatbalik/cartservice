@@ -8,7 +8,7 @@
         stages {
             stage('Code checkout') {
                 steps {
-                    checkout([$class: 'GitSCM', branches: [[name: '*/main/src']], extensions: [], userRemoteConfigs: [[credentialsId: 'prodevopsprojects', url: 'git@github.com:prodevopsprojects/cartservice.git']]])
+                    checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'prodevopsprojects', url: 'git@github.com:prodevopsprojects/cartservice.git']]])
                 }
             }
             stage('Building image') {
