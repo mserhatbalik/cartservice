@@ -14,7 +14,7 @@
             stage('Building image') {
                 steps{
                     script {
-                    dockerImage = docker.build(imageName, ./src)
+                    dockerImage = docker.build(imageName, "./src")
                     }
                 }
             }
