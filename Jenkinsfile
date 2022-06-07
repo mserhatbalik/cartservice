@@ -27,5 +27,10 @@
                     }
                 }
             }
+            stage('Confirming build success') {
+                steps{  
+                    writeFile file: 'cartservice.txt', text: 'Build is completed successfully.'
+                    }
+            }
         }
     }
